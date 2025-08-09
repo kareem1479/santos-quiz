@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SANTOS QUIZ - سانتوس كويز</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAV / HEADER -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="site-name">سانتوس كويز</div>
+    </div>
+
+    <button id="menuBtn" class="hamburger" aria-label="قائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main">
+    <!-- Home / Landing -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <h1 class="hero-title">سانتوس كويز</h1>
+        <p class="hero-sub">لعبة تحديات ممتعة، تنافسية، تناسب العائلة والأصحاب!</p>
+
+        <div class="center-actions">
+          <button id="startFreeBtn" class="btn primary">ابدأ لعبة مجانية</button>
+          <button id="loginBtn" class="btn outline">تسجيل الدخول</button>
+        </div>
+
+        <div class="about-card">
+          <h3>🎮 وش هي "سانتوس كويز"؟</h3>
+          <p>سانتوس كويز هي لعبة تحديات ممتعة، مصمّمة خصيصًا للي يحبوا يختبروا معلوماتهم بطريقة حماسية وتنافسية!</p>
+          <h4>⁉️ وش أنواع الفئات؟</h4>
+          <ul>
+            <li>📺 مسلسلات وأفلام</li>
+            <li>🎤 مغنين وأغاني</li>
+            <li>🌍 دول وعواصم</li>
+            <li>🧠 معلومات عامة</li>
+          </ul>
+
+          <h4>🧩 نظام اللعب:</h4>
+          <p>كل فريق يختار اسمه<br>تختارون الفئات اللي تبغونها<br>يبدأ التحدي، ويطلع السؤال مع مؤقّت<br>الفريق اللي عليه الدور يجاوب خلال وقت محدد<br>إذا ثبت على اجابه او ما جاوب، تنتقل الفرصة للفريق الثاني</p>
+
+          <h4>💰 كيف النظام؟</h4>
+          <p>أول تجربة مجانية! ✅<br>وبعدها تقدر تشتري ألعاب بأسعار رمزية:</p>
+          <div class="prices">
+            <div>٩ ريال = لعبة وحدة</div>
+            <div>١٥ ريال = لعبتين</div>
+            <div>٣٠ ريال = ٥ ألعاب</div>
+            <div>٥٠ ريال = ٩ ألعاب</div>
+            <div>٧٥ ريال = ١٥ لعبة</div>
+          </div>
+
+          <h4>🎯 الهدف من اللعبة:</h4>
+          <p>نرجّع جو التحدي الجماعي، نضحك، نتعلم، ونستمتع سوا. مناسبة للجلسات، الطلعات، أو جمعة العائلة في البيت 🏠</p>
+
+          <p class="cta">سانتوس كويز مو بس لعبة... هي تحدي، متعة، وتسلية لكل الأعمار! 💥</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register Page -->
+    <section id="register" class="page">
+      <div class="card">
+        <h2>سجل بياناتك</h2>
+        <form id="registerForm">
+          <label>الاسم الكامل
+            <input name="name" required placeholder="اكتب اسمك" />
+          </label>
+          <label>رقم الجوال
+            <input name="phone" required placeholder="05XXXXXXXX" />
+          </label>
+          <label>البريد الإلكتروني
+            <input name="email" type="email" required placeholder="you@mail.com" />
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">تسجيل ومتابعة</button>
+            <button type="button" class="btn outline" id="backToHome">إلغاء</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Categories / Teams Page -->
+    <section id="categories" class="page">
+      <div class="card">
+        <h2>اختار الفرق والفئات</h2>
+
+        <div class="teams">
+          <div>
+            <label>اسم فريق 1
+              <input id="team1" placeholder="فريق 1" />
+            </label>
+          </div>
+          <div>
+            <label>اسم فريق 2
+              <input id="team2" placeholder="فريق 2" />
+            </label>
+          </div>
+        </div>
+
+        <h3>اختر الفئات</h3>
+        <div class="categories-grid">
+          <label><input type="checkbox" value="مسلسلات وأفلام" class="cat"> مسلسلات وأفلام</label>
+          <label><input type="checkbox" value="مغنين وأغاني" class="cat"> مغنين وأغاني</label>
+          <label><input type="checkbox" value="دول وعواصم" class="cat"> دول وعواصم</label>
+          <label><input type="checkbox" value="معلومات عامة" class="cat"> معلومات عامة</label>
+          <label><input type="checkbox" value="تاريخ" class="cat"> تاريخ</label>
+          <label><input type="checkbox" value="رياضة" class="cat"> رياضة</label>
+        </div>
+
+        <div class="form-actions">
+          <button id="startGameBtn" class="btn primary">ابدأ التحدي</button>
+          <button id="catBack" class="btn outline">رجوع</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Page (simple simulation) -->
+    <section id="game" class="page">
+      <div class="game-area card">
+        <div class="game-header">
+          <div class="teams-display">
+            <div id="displayTeam1" class="team active-team">فريق 1</div>
+            <div id="displayTeam2" class="team">فريق 2</div>
+          </div>
+          <div class="timer">الوقت: <span id="timer">15</span> ث</div>
+        </div>
+
+        <div class="question-box">
+          <div id="questionText">هذا سؤال تجريبي: من هو ... ؟</div>
+          <div class="answers">
+            <button class="ans">أ</button>
+            <button class="ans">ب</button>
+            <button class="ans">ج</button>
+            <button class="ans">د</button>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button id="finishGame" class="btn primary">انتهى اللعب - الدفع</button>
+          <button id="gameBack" class="btn outline">خروج</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Page (simulation) -->
+    <section id="payment" class="page">
+      <div class="card">
+        <h2>صفحة الدفع</h2>
+        <p>اختار باقة الدفع اللي تناسبك:</p>
+
+        <div class="payment-grid">
+          <label class="pack">
+            <input type="radio" name="pack" value="9" checked>
+            <div class="pack-title">٩ ريال</div>
+            <div class="pack-sub">لعبة وحدة</div>
+          </label>
+
+          <label class="pack">
+            <input type="radio" name="pack" value="15">
+            <div class="pack-title">١٥ ريال</div>
+            <div class="pack-sub">لعبتين</div>
+          </label>
+
+          <label class="pack">
+            <input type="radio" name="pack" value="30">
+            <div class="pack-title">٣٠ ريال</div>
+            <div class="pack-sub">٥ ألعاب</div>
+          </label>
+
+          <label class="pack">
+            <input type="radio" name="pack" value="50">
+            <div class="pack-title">٥٠ ريال</div>
+            <div class="pack-sub">٩ ألعاب</div>
+          </label>
+
+          <label class="pack">
+            <input type="radio" name="pack" value="75">
+            <div class="pack-title">٧٥ ريال</div>
+            <div class="pack-sub">١٥ لعبة</div>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button id="payNow" class="btn primary">ادفع الآن (محاكاة)</button>
+          <button id="payBack" class="btn outline">رجوع</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+      &copy; <span id="year"></span> سانتوس كويز — كل الحقوق محفوظة
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
